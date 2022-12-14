@@ -1,0 +1,58 @@
+
+
+METADATA_FIELDS = {
+    "_fields" : [
+        # extracts metadata from a `Field` class
+        {"name": "name", "data_type": "TEXT", "accessor": "name_postgres"},
+        {"name": "data_type", "data_type": "TEXT", "accessor": "data_type"},
+        {"name": "input_type", "data_type": "TEXT", "accessor": "_handle_type"},
+        {"name": "table_name", "data_type": "TEXT", "accessor": "table.name_postgres"},
+        # {"name": "view_name", "data_type": "TEXT", "accessor": "table.name_postgres"}, # todo
+        {"name": "is_primary_key", "data_type": "BOOLEAN", "accessor": "is_primary_key"},
+        {"name": "options", "data_type": "TEXT[]", "accessor": "_handle_options"},
+        # {"name": "read_only", "data_type": "BOOLEAN", "accessor": "name_postgres"},
+        {"name": "is_formula", "data_type": "BOOLEAN", "accessor": "is_formula"},
+        {"name": "is_connection", "data_type": "BOOLEAN", "accessor": "is_connection"},
+    ],
+    "_views" : [
+        # extracts metadata from a `KnackView` class
+        { "name": "name", "data_type": "TEXT", "accessor": "name"},
+        { "name": "inputs", "data_type": "JSON", "accessor": "inputs"},
+        { "name": "child_child_views", "data_type": "JSON[]", "accessor": "child_child_views"},
+        { "name": "_id", "data_type": "TEXT", "accessor": "_id"},
+        { "name": "description", "data_type": "TEXT", "accessor": "description"},
+        { "name": "layout", "data_type": "TEXT", "accessor": "layout"},
+        { "name": "child_scenes", "data_type": "TEXT[]", "accessor": "child_scenes"},
+        { "name": "type", "data_type": "TEXT", "accessor": "type"},
+        { "name": "rules", "data_type": "JSON", "accessor": "rules"},
+        { "name": "options", "data_type": "JSON", "accessor": "options"},
+        { "name": "key", "data_type": "TEXT", "accessor": "key"},
+        { "name": "alert", "data_type": "TEXT", "accessor": "alert"},
+        { "name": "limit_profile_access", "data_type": "BOOLEAN", "accessor": "limit_profile_access"},
+        { "name": "allowed_profiles", "data_type": "TEXT[]", "accessor": "allowed_profiles"},
+        { "name": "child_views", "data_type": "TEXT[]", "accessor": "child_views"},
+        { "name": "allow_exporting", "data_type": "BOOLEAN", "accessor": "allow_exporting"},
+        { "name": "label", "data_type": "TEXT", "accessor": "label"},
+        { "name": "keyword_search", "data_type": "BOOLEAN", "accessor": "keyword_search"},
+        { "name": "source", "data_type": "JSON", "accessor": "source"},
+        { "name": "title", "data_type": "TEXT", "accessor": "title"},
+        { "name": "columns", "data_type": "JSON", "accessor": "columns"},
+        { "name": "groups", "data_type": "JSON", "accessor": "groups"},
+    ],
+    "_pages" : [
+        {"name": "limit_profile_access", "data_type": "BOOLEAN"},
+        {"name": "groups", "data_type": "JSON"},
+        {"name": "views", "data_type": "TEXT[]"},
+        {"name": "authenticated", "data_type": "BOOLEAN"},
+        {"name": "key", "data_type": "TEXT"},
+        {"name": "allowed_profiles", "data_type": "TEXT[]"},
+        {"name": "icon", "data_type": "TEXT"},
+        {"name": "object", "data_type": "TEXT"},
+        {"name": "type", "data_type": "TEXT"},
+        {"name": "_views", "data_type": "TEXT[]"},
+        {"name": "_id", "data_type": "TEXT"},
+        {"name": "slug", "data_type": "TEXT"},
+        {"name": "parent", "data_type": "TEXT"},
+        {"name": "name", "data_type": "TEXT"},
+    ],
+}
